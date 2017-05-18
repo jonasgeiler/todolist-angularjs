@@ -1,0 +1,92 @@
+<div class="todolist">
+    <div class="settings-btn">
+        <button class="btn btn-primary" ng-click="location.path('/settings')">
+            <i class="fa fa-cog" aria-hidden="true"></i> {{lang.settings}}
+        </button>
+    </div>
+
+    <a class="new-list" ng-click="newList()" title="{{lang.newlisttitle}}">
+        <i class="fa fa-plus-circle" aria-hidden="true"></i> {{lang.newlist}}
+    </a>
+
+    <div class="tabs">
+        <ul class="nav nav-tabs">
+            <li class="nav-item" role="presentation" ng-repeat="tab in lists track by tab.id">
+                <a class="nav-link" ng-click="location.path('/list/' + tab.id)" ng-class="{ active:show_tab == tab.id }" title="{{lang.switchtolist}} '{{tab.title}}'">{{tab.title}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="lists">
+        <div class="list-content" ng-repeat="list in lists track by list.id" ng-show="show_tab == list.id">
+            <h3 class="list-title">{{list.title}}</h3>
+            <a class="list-delete" ng-click="deleteList(list.id)" title="{{lang.deletelisttitle}}">
+                <i class="fa fa-trash-o" aria-hidden="true"></i> {{lang.deletelist}}
+            </a>
+
+            <p class="priorities">{{lang.priorities}}:
+                <span class="priority--1">-1</span>,
+                <span class="priority-0">0</span>,
+                <span class="priority-1">1</span>,
+                <span class="priority-2">2</span>
+            </p>
+            <form class="todo-form">
+
+                <ul ng-repeat="todo in list.todos" class="todo-list">
+                    <li>
+                        <div class="form-check todo">
+
+                            <label class="form-check-label">
+
+                                <input ng-checked="todo.done" ng-click="checkTodo(list.id, todo.id)" name="todo" class="form-check-input todo-check" type="checkbox" title="{{lang.setthistodoas}} {{todo.done | doneFilter: lang.open : lang.done}}"></input>
+                                
+                                <dt ng-class="{ strike:todo.done }" class="todo-title priority-{{todo.priority}}">{{todo.name}}<small class="todo-date">, {{lang.added}}: {{todo.date | date: settings.dateformat : settings.timezone}}</small></dt>
+                                <dd ng-class="{ strike:todo.done }" ng-hide="todo.notice == ''" class="todo-notice">{{todo.notice}}</dd>
+
+                            </label>
+
+                        </div>
+                    </li>
+                </ul>
+
+            </form>
+
+            <a class="list-remove-ticked" ng-click="removeTickedTodos(list.id)" title="{{lang.removetickedtitle}}">
+                <i class="fa fa-minus-circle" aria-hidden="true"></i> {{lang.removeticked}}
+            </a>
+
+            <div class="add-todo">
+                <form class="add-form" ng-submit="addTodo()">
+                    <h5>{{lang.addnewtodoto}} {{list.title}}:</h5>
+
+                    <div class="form-group">
+                        <label for="todo-name">{{lang.name}}:</label>
+                        <input type="text" class="form-control" placeholder="{{lang.name}}..." name="todo-name" id="todo-name" ng-model="add_todo.name"
+                            required>
+                        <small id="name-help" class="form-text text-muted">{{lang.namehelp}}.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="todo-notice">{{lang.notice}}:</label>
+                        <textarea class="form-control" placeholder="{{lang.notice}}..." rows="3" name="todo-notice" id="todo-notice" ng-model="add_todo.notice"></textarea>
+                        <small id="notice-help" class="form-text text-muted">{{lang.noticehelp}}.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="todo-priority">{{lang.priority}}:</label>
+                        <select class="form-control" name="todo-priority" id="todo-priority" ng-model="add_todo.priority"><
+                            <option value="0">{{lang.priorityselect}}...</option>
+                            <option>2</option>
+                            <option>1</option>
+                            <option>0</option>
+                            <option>-1</option>
+                        </select>
+                        <small id="priority-help" class="form-text text-muted">{{lang.priorityhelp}}.</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> {{lang.add}}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

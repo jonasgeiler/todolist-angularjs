@@ -1,0 +1,153 @@
+body {
+    color: white !important;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.title {
+    float: left;
+}
+
+.settings-btn {
+    float: right;
+}
+
+.tabs {
+    clear: left;
+    padding-top: 10px;
+}
+
+.col-centered {
+    margin: 0 auto;
+}
+
+.nav-item {
+    cursor: pointer;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: transparent !important;
+    color: white;
+}
+
+.list-title {
+    margin-top: 10px;
+    float: left;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-title {
+    margin-top: -2px;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.strike .todo-date {
+    text-decoration: line-through;
+}
+
+.priority--1 {
+    color: #3377ff;
+}
+
+.priority-0 {
+    color: #02d8bc;
+}
+
+.priority-1 {
+    color: #ff7700;
+}
+
+.priority-2 {
+    color: #ff3333;
+}
+
+.list-delete {
+    color: #ff3333 !important;
+    cursor: pointer;
+    float: right;
+    margin-top: 15px;
+}
+
+.list-delete:hover, .list-delete:active {
+    text-decoration: underline !important;
+}
+
+.priorities {
+    clear: left;
+}
+
+.add-todo {
+    margin-top: 60px;
+}
+
+.settings {
+    margin-bottom: 30px;
+}
+
+.todo-date {
+    color: #636c72;
+}
+
+.list-remove-ticked {
+    color: #ff7700 !important;
+    cursor: pointer;
+}
+
+.list-remove-ticked:hover,
+.list-remove-ticked:active {
+    text-decoration: underline !important;
+}
+
+.new-list {
+    color: #02d8bc !important;
+    cursor: pointer;
+
+    clear: left;
+    float: left;
+
+    padding-top: 15px;
+}
+
+.new-list:hover,
+.new-list:active {
+    text-decoration: underline !important;
+}
+
+.settings-title {
+    padding-top: 10px;
+
+    clear: left;
+}
+
+.settings-back {
+    color: #3377ff !important;
+    cursor: pointer;
+
+    clear: left;
+    float: left;
+
+    padding-top: 15px;
+    font-size: 17px;
+}
+
+.settings-back:hover,
+.settings-back:active,
+.settings-back:visited {
+    color: #2d63d0 !important;
+}
+
+.todolist {
+    margin-bottom: 30px;
+}
+
+.reload {
+    margin: 10px;
+}
