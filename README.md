@@ -1,4 +1,6 @@
 # AngularJS-TodoList
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/85db5afb8f0d4ae7a0a16bb1a17759aa)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Skayo/AngularJS-TodoList&amp;utm_campaign=Badge_Grade)
+
 A simple TodoList built with AngularJS
 
 This is my first AngularJS App!
