@@ -8,6 +8,9 @@ This is my first AngularJS App!
 # Screenshot
 [![TodoList.png](https://s21.postimg.org/flau7kxef/Todo_List.png)]()
 
+# Todo
+- Rename CSS Classes
+
 # Adding languages
 - First look into the ``languages/en.json`` and ``languages/de.json`` and copy one of them
 - Then translate everything
