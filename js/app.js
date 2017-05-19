@@ -3,7 +3,6 @@
 
 TODO:
 
-- Refactor
 - Rename CSS Classes (maybe)
 
 */

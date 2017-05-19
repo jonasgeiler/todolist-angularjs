@@ -1,9 +1,9 @@
 app.filter('doneFilter', function () {
-    return function (state, lang_open, lang_done) {
-        if (state == true) {
-            return lang_open;
+    return function (state, langOpen, langDone) { // langOpen and langDone are used for translation
+        if (state === true) {
+            return langOpen;
         } else {
-            return lang_done;
+            return langDone;
         }
     };
 });

@@ -2,7 +2,7 @@ app.factory('storageProvider', function () {
     var storageProvider = {};
 
     // Default storage wich is set on the first page load
-    storageProvider.default_storage = {
+    storageProvider.defaultStorage = {
         settings: {
             title: 'TodoListr',
             language: 'en',
@@ -12,7 +12,7 @@ app.factory('storageProvider', function () {
         lists: [
             {
                 id: 0,
-                title: "Default",
+                title: 'Default',
                 todos: [
                     {
                         id: 0,
@@ -30,19 +30,19 @@ app.factory('storageProvider', function () {
     // The loaded storage
     storageProvider.storage = {};
 
-    if (localStorage.length == 0) { // If localstorage is emtpy (First page load)
-        storageProvider.default_storage.lists[0].todos[0].date = Date.now(); // Set date of default todo as now
+    if (localStorage.length === 0) { // If localstorage is emtpy (First page load)
+        storageProvider.defaultStorage.lists[0].todos[0].date = Date.now(); // Set date of default todo as now
 
-        localStorage.setItem('storage', JSON.stringify(storageProvider.default_storage)); // Save storage to localstorage
+        localStorage.setItem('storage', JSON.stringify(storageProvider.defaultStorage)); // Save storage to localstorage
         
-        storageProvider.storage = storageProvider.default_storage; // Set the loaded storage to the default storage
+        storageProvider.storage = storageProvider.defaultStorage; // Set the loaded storage to the default storage
         
-        console.log("Created new storage");
+        console.log('Created new storage');
     } else { // If localstorage is not empty and the user has a saved storage
         storageProvider.storage = JSON.parse(localStorage.getItem('storage')); // Load the saved storage
     }
 
-    console.log("Loaded storage");
+    console.log('Loaded storage');
 
     // Save function to save to the localstorage
     storageProvider.save = function (newstorage) {
@@ -50,7 +50,7 @@ app.factory('storageProvider', function () {
 
         storageProvider.storage = newstorage; // Set the loaded storage to the new storage
          
-        console.log("Saved storage");
+        console.log('Saved storage');
     };
 
     return storageProvider;

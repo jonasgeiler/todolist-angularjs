@@ -11,7 +11,7 @@ app.controller('SettingsController', function ($scope,  $rootScope, $location) {
     // Languages
     $scope.languages = [{ short: 'en', full: 'English' }, { short: 'de', full: 'Deutsch' }]; //   <<<    Add new languages here!
 
-    // Called when the "Save" button is clicked
+    // Called when the 'Save' button is clicked
     $scope.saveSettings = function () {
         base.saveStorage(); // Save storage
 

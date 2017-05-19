@@ -3,7 +3,7 @@ app.factory('lang', function ($http) {
 
     lang.load = function (lang) {
         var loadedlang = {};
-        var url = "/languages/" + lang + ".json";
+        var url = '/languages/' + lang + '.json';
         return $http.get(url);
     };
 

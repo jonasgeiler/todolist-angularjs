@@ -5,15 +5,15 @@ app.controller('BaseController', function($scope, lang, storageProvider){
 
     // Load languages
     $scope.lang = {};
-    lang.load($scope.settings.language) // Returns the return of "$http.get()" object to use "then()" in this controller
+    lang.load($scope.settings.language) // Returns the return of '$http.get()' object to use 'then()' in this controller
         .then(
             function success(response) {
                 $scope.lang = response.data;
-                console.log("Loaded language " + $scope.settings.language);
+                console.log('Loaded language ' + $scope.settings.language);
             },
 
             function error(response) {
-                console.error("Cannot load language '" + $scope.settings.language + "'. Response:", response);
+                console.error('Cannot load language \'' + $scope.settings.language + '\'. Response:', response);
             }
         );
 

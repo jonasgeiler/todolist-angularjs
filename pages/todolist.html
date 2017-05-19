@@ -12,13 +12,13 @@
     <div class="tabs">
         <ul class="nav nav-tabs">
             <li class="nav-item" role="presentation" ng-repeat="tab in lists track by tab.id">
-                <a class="nav-link" ng-click="location.path('/list/' + tab.id)" ng-class="{ active:show_tab == tab.id }" title="{{lang.switchtolist}} '{{tab.title}}'">{{tab.title}}</a>
+                <a class="nav-link" ng-click="location.path('/list/' + tab.id)" ng-class="{ active:showTab == tab.id }" title="{{lang.switchtolist}} '{{tab.title}}'">{{tab.title}}</a>
             </li>
         </ul>
     </div>
 
     <div class="lists">
-        <div class="list-content" ng-repeat="list in lists track by list.id" ng-show="show_tab == list.id">
+        <div class="list-content" ng-repeat="list in lists track by list.id" ng-show="showTab == list.id">
             <h3 class="list-title">{{list.title}}</h3>
             <a class="list-delete" ng-click="deleteList(list.id)" title="{{lang.deletelisttitle}}">
                 <i class="fa fa-trash-o" aria-hidden="true"></i> {{lang.deletelist}}
@@ -61,20 +61,20 @@
 
                     <div class="form-group">
                         <label for="todo-name">{{lang.name}}:</label>
-                        <input type="text" class="form-control" placeholder="{{lang.name}}..." name="todo-name" id="todo-name" ng-model="add_todo.name"
+                        <input type="text" class="form-control" placeholder="{{lang.name}}..." name="todo-name" id="todo-name" ng-model="addTodoForm.name"
                             required>
                         <small id="name-help" class="form-text text-muted">{{lang.namehelp}}.</small>
                     </div>
 
                     <div class="form-group">
                         <label for="todo-notice">{{lang.notice}}:</label>
-                        <textarea class="form-control" placeholder="{{lang.notice}}..." rows="3" name="todo-notice" id="todo-notice" ng-model="add_todo.notice"></textarea>
+                        <textarea class="form-control" placeholder="{{lang.notice}}..." rows="3" name="todo-notice" id="todo-notice" ng-model="addTodoForm.notice"></textarea>
                         <small id="notice-help" class="form-text text-muted">{{lang.noticehelp}}.</small>
                     </div>
 
                     <div class="form-group">
                         <label for="todo-priority">{{lang.priority}}:</label>
-                        <select class="form-control" name="todo-priority" id="todo-priority" ng-model="add_todo.priority"><
+                        <select class="form-control" name="todo-priority" id="todo-priority" ng-model="addTodoForm.priority"><
                             <option value="0">{{lang.priorityselect}}...</option>
                             <option>2</option>
                             <option>1</option>
