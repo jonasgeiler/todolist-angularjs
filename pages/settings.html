@@ -16,7 +16,7 @@
 
         <div class="form-group">
             <label for="settings-title">{{lang.language}}:</label>
-            <select class="form-control" name="settings-language" id="settings-language" ng-model="settings.language" ng-change="show_reload = true">
+            <select class="form-control" name="settings-language" id="settings-language" ng-model="settings.language" ng-change="showReload = true">
                                         <option ng-repeat="l in languages" value="{{l.short}}">{{l.full}}</option>
                                     </select>
             <small id="language-help" class="form-text text-muted">{{lang.languagehelp}}.</small>
@@ -36,7 +36,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary" id="submit-btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{lang.save}}</button>
-        <label for="submit-btn" class="reload" ng-show="show_reload">Please reload the page after saving!</label>
+        <label for="submit-btn" class="reload" ng-show="showReload">Please reload the page after saving!</label>
     </form>
 
 </div>

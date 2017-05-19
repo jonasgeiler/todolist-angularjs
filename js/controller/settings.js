@@ -6,7 +6,7 @@ app.controller('SettingsController', function ($scope,  $rootScope, $location) {
     $scope.location = $location;
 
     // Show var
-    $scope.show_reload = false; // True if the user changed the language
+    $scope.showReload = false; // True if the user changed the language
 
     // Languages
     $scope.languages = [{ short: 'en', full: 'English' }, { short: 'de', full: 'Deutsch' }]; //   <<<    Add new languages here!
