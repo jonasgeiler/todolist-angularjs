@@ -9,7 +9,7 @@ This is my first AngularJS App!
 [![TodoList.png](https://s21.postimg.org/flau7kxef/Todo_List.png)]()
 
 # Todo
-- Nothing
+- Port to Electron (new repository)
 
 # Adding languages
 - First look into the ``languages/en.json`` and ``languages/de.json`` and copy one of them
