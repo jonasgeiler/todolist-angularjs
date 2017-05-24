@@ -5,11 +5,13 @@ A simple TodoList built with AngularJS
 
 This is my first AngularJS App!
 
+Electron Edition: https://github.com/Skayo/AngularJS-Todolist_Electron-Edition
+
 # Screenshot
 [![TodoList.png](https://s21.postimg.org/flau7kxef/Todo_List.png)]()
 
 # Todo
-- Port to Electron (new repository)
+- Make tabs responsive
 
 # Adding languages
 - First look into the ``languages/en.json`` and ``languages/de.json`` and copy one of them
