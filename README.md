@@ -7,6 +7,10 @@ This is my first AngularJS App!
 
 Electron Edition: https://github.com/Skayo/AngularJS-Todolist_Electron-Edition
 
+# Demo
+
+[Click here for a demo](https://skayo.github.io/AngularJS-TodoList/)
+
 # Screenshot
 [![TodoList.png](https://s21.postimg.org/flau7kxef/Todo_List.png)]()
 
