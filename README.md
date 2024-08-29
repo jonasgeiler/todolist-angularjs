@@ -1,26 +1,42 @@
-# AngularJS-TodoList
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/85db5afb8f0d4ae7a0a16bb1a17759aa)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Skayo/AngularJS-TodoList&amp;utm_campaign=Badge_Grade)
+# todolist-angular
 
-A simple TodoList built with AngularJS
+> A simple todolist webapp made with AngularJS.
 
-This is my first AngularJS App!
+This is the very first webapp I ever made. Many, many years ago.
+Back then I thought that AngularJS would be a framework for the future.
+But AngularJS is dead now.
 
-Electron Edition: https://github.com/Skayo/AngularJS-Todolist_Electron-Edition
+Nevertheless, I tried to modernize it a tiny bit and get it running again.
+I didn't change much, just the build process and the way dependencies are
+managed (yeah, I used to upload `node_modules` back then...).
+The code is still as bad as it was back then :D
 
-# Demo
+## [Demo](https://todolist-angularjs.jonasgeiler.com)
 
-[Click here for a demo](https://skayo.github.io/AngularJS-TodoList/)
+![Screenshot](https://github.com/user-attachments/assets/d7ebb767-b086-4f44-8ff2-83191b0e5d51)
 
-# Screenshot
-[![TodoList.png](https://s21.postimg.org/flau7kxef/Todo_List.png)]()
+## Development
 
-# Todo
-- Nothing
+Install dependencies:
 
-# Adding languages
-- First look into the ``languages/en.json`` and ``languages/de.json`` and copy one of them
-- Rename the copied file to ``(short-name).json`` where (short-name) is the short name of you language
-- Then translate everything
-- If you are finished go into the ``js/controller/settings.js`` and add your language (like the other two) to the ``$scope.languages``-Array
-  - The short name must be equally to the file name
-  - The full name is for the settings on the website
+```bash
+pnpm install
+```
+
+Run the development server:
+
+```bash
+pnpm run dev
+```
+
+Build the project:
+
+```bash
+pnpm run build
+```
+
+Preview the production build:
+
+```bash
+pnpm run preview
+```

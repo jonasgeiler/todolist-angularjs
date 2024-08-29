@@ -8,15 +8,15 @@ app.controller('TodoListController', function($scope, $routeParams, $location){
     // Set current showing tab to the id passed by url
     $scope.showTab = $routeParams.id;
 
-    // Add-Todo form model
+    // Add-To do form model
     $scope.addTodoForm = {};
 
     // Set priority to '0' so the first option in the selection ('Select Priority...') is selected by default
     $scope.addTodoForm.priority = '0';
 
-    // Called when clicking the checkbox next to a todo.
+    // Called when clicking the checkbox next to a to do.
     $scope.checkTodo = function(listID, todoID){
-        if (base.lists[listID].todos[todoID].done){ // Check if todo is done
+        if (base.lists[listID].todos[todoID].done){ // Check if to do is done
             base.lists[listID].todos[todoID].done = false; // If it was already done, set it back to false ('open')
             console.log('Unchecked ' + listID + ',' + todoID );
         } else {
@@ -26,7 +26,7 @@ app.controller('TodoListController', function($scope, $routeParams, $location){
         base.saveStorage(); // Save storage
     };
 
-    // Called when the Add-Todo form gets submitted
+    // Called when the Add-To do form gets submitted
     $scope.addTodo = function(){
         // Default values
         $scope.addTodoForm.done = false;
@@ -34,7 +34,7 @@ app.controller('TodoListController', function($scope, $routeParams, $location){
         $scope.addTodoForm.date = Date.now();
 
         $scope.addTodoForm.priority = parseInt($scope.addTodoForm.priority); // Convert priority from string (from option value) to integer
-        
+
         // If no notice was set, set notice to an empty string
         if (typeof $scope.addTodoForm.notice == 'undefined'){
             $scope.addTodoForm.notice = '';
@@ -43,7 +43,7 @@ app.controller('TodoListController', function($scope, $routeParams, $location){
         console.log('Added todo:');
         console.log($scope.addTodoForm);
 
-        base.lists[$scope.showTab].todos.push($scope.addTodoForm); // Push the new todo to the todo-list of the current list 
+        base.lists[$scope.showTab].todos.push($scope.addTodoForm); // Push the new to do to the todo-list of the current list
 
         base.saveStorage(); // Save storage
 

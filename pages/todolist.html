@@ -41,7 +41,7 @@
                             <label class="form-check-label">
 
                                 <input type="checkbox" ng-checked="todo.done" ng-click="checkTodo(list.id, todo.id)" class="form-check-input todo-check -cursor-pointer" title="{{lang.setthistodoas}} {{todo.done | doneFilter: lang.open : lang.done}}" name="todo"></input>
-                                
+
                                 <dt ng-class="{ strike:todo.done }" class="todo-name priority-{{todo.priority}}">{{todo.name}}
                                     <small class="todo-date" ng-class="{ strike:todo.done }">, {{lang.added}}: {{todo.date | date: settings.dateformat : settings.timezone}}</small>
                                 </dt>

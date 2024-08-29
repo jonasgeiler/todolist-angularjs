@@ -1,0 +1,34 @@
+{
+  "name": "todolist-angularjs",
+  "private": true,
+  "scripts": {
+    "postinstall": "run-p postinstall:*",
+    "postinstall:css": "shx rm -rf ./css/vendors && shx mkdir -p ./css/vendors && run-p postinstall:css:*",
+    "postinstall:css:bootstrap": "shx rm -rf ./css/vendors/bootstrap && shx mkdir -p ./css/vendors/bootstrap && shx cp './node_modules/bootstrap/dist/css/bootstrap.min.{css,css.map}' ./css/vendors/bootstrap",
+    "postinstall:css:font-awesome": "shx rm -rf ./css/vendors/font-awesome && shx mkdir -p ./css/vendors/font-awesome/css && shx cp ./node_modules/font-awesome/css/font-awesome.min.css ./css/vendors/font-awesome/css && shx cp -r ./node_modules/font-awesome/fonts ./css/vendors/font-awesome",
+    "postinstall:js": "shx rm -rf ./js/vendors && shx mkdir -p ./js/vendors && run-p postinstall:js:*",
+    "postinstall:js:angular": "shx rm -rf ./js/vendors/angular && shx mkdir -p ./js/vendors/angular && shx cp './node_modules/angular/angular.min.{js,js.map}' ./js/vendors/angular",
+    "postinstall:js:angular-route": "shx rm -rf ./js/vendors/angular-route && shx mkdir -p ./js/vendors/angular-route && shx cp './node_modules/angular-route/angular-route.min.{js,js.map}' ./js/vendors/angular-route",
+    "postinstall:js:bootstrap": "shx rm -rf ./js/vendors/bootstrap && shx mkdir -p ./js/vendors/bootstrap && shx cp './node_modules/bootstrap/dist/js/bootstrap.min.{js,js.map}' ./js/vendors/bootstrap",
+    "postinstall:js:jquery": "shx rm -rf ./js/vendors/jquery && shx mkdir -p ./js/vendors/jquery && shx cp './node_modules/jquery/dist/jquery.min.{js,map}' ./js/vendors/jquery",
+    "dev": "serve",
+    "build": "shx rm -rf ./dist && shx mkdir ./dist && shx cp -r ./css ./js ./languages ./pages ./index.html ./dist",
+    "preview": "serve ./dist"
+  },
+  "dependencies": {
+    "angular": "1.6.4",
+    "angular-route": "1.6.4",
+    "bootstrap": "4.3.1",
+    "font-awesome": "4.7.0",
+    "jquery": "3.2.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "serve": "^14.2.3",
+    "shx": "^0.3.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
+}
