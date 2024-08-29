@@ -1,12 +1,4 @@
 
-/*
-
-TODO:
-
-- Rename CSS Classes (maybe)
-
-*/
-
 // Create angular module
 var app = angular.module('TodoList', ['ngRoute']);
 
@@ -28,4 +20,3 @@ app.config(['$routeProvider', function ($routeProvider) {
             redirectTo: '/list/0'
         });
 }]);
-

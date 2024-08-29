@@ -4,7 +4,7 @@ app.factory('storageProvider', function () {
     // Default storage wich is set on the first page load
     storageProvider.defaultStorage = {
         settings: {
-            title: 'TodoListr',
+            title: 'TodoList',
             language: 'en',
             dateformat: 'HH:mm dd.MM.yyyy',
             timezone: '+0000'
@@ -31,12 +31,12 @@ app.factory('storageProvider', function () {
     storageProvider.storage = {};
 
     if (localStorage.length === 0) { // If localstorage is emtpy (First page load)
-        storageProvider.defaultStorage.lists[0].todos[0].date = Date.now(); // Set date of default todo as now
+        storageProvider.defaultStorage.lists[0].todos[0].date = Date.now(); // Set date of default to do as now
 
         localStorage.setItem('storage', JSON.stringify(storageProvider.defaultStorage)); // Save storage to localstorage
-        
+
         storageProvider.storage = storageProvider.defaultStorage; // Set the loaded storage to the default storage
-        
+
         console.log('Created new storage');
     } else { // If localstorage is not empty and the user has a saved storage
         storageProvider.storage = JSON.parse(localStorage.getItem('storage')); // Load the saved storage
@@ -49,7 +49,7 @@ app.factory('storageProvider', function () {
         localStorage.setItem('storage', JSON.stringify(newstorage)); // Save storage to localstorage
 
         storageProvider.storage = newstorage; // Set the loaded storage to the new storage
-         
+
         console.log('Saved storage');
     };
 
