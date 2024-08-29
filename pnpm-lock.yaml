@@ -9,20 +9,20 @@ importers:
   .:
     dependencies:
       angular:
-        specifier: 1.6.4
-        version: 1.6.4
+        specifier: 1.8.3
+        version: 1.8.3
       angular-route:
         specifier: 1.6.4
         version: 1.6.4
       bootstrap:
-        specifier: 4.3.1
-        version: 4.3.1(jquery@3.2.1)(popper.js@1.16.1)
+        specifier: 5.0.0
+        version: 5.0.0(@popperjs/core@2.11.8)
       font-awesome:
         specifier: 4.7.0
         version: 4.7.0
       jquery:
-        specifier: 3.2.1
-        version: 3.2.1
+        specifier: 3.5.0
+        version: 3.5.0
     devDependencies:
       npm-run-all:
         specifier: ^4.1.5
@@ -35,6 +35,9 @@ importers:
         version: 0.3.4
 
 packages:
+
+  '@popperjs/core@2.11.8':
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
   '@zeit/schemas@2.36.0':
     resolution: {integrity: sha512-7kjMwcChYEzMKjeex9ZFXkt1AyNov9R5HZtjBKVsmVpw7pa7ZtlCGvCBC2vnnXctaYN+aRI61HjIqeetZW5ROg==}
@@ -50,8 +53,8 @@ packages:
     resolution: {integrity: sha512-Grn6bJTEEnoWcm+aavOoXfPq1pJzZ8VJmWFgfQLDKuUCxxPQ9uhJ1Clw8sNwu95Cq6w9cMtWOcXWgBfxD1+gSA==}
     deprecated: For the actively supported Angular, see https://www.npmjs.com/package/@angular/core. AngularJS support has officially ended. For extended AngularJS support options, see https://goo.gle/angularjs-path-forward.
 
-  angular@1.6.4:
-    resolution: {integrity: sha512-na86La7KLT+ooG25p3MESR0K/apeR4hN96QZRh61MyR3is8DeBLV7HjGdY3R/qGsnTWSDbnI2/T1K6DZK9pVSQ==}
+  angular@1.8.3:
+    resolution: {integrity: sha512-5qjkWIQQVsHj4Sb5TcEs4WZWpFeVFHXwxEBHUhrny41D8UrBAd6T/6nPPAsLngJCReIOqi95W3mxdveveutpZw==}
     deprecated: For the actively supported Angular, see https://www.npmjs.com/package/@angular/core. AngularJS support has officially ended. For extended AngularJS support options, see https://goo.gle/angularjs-path-forward.
 
   ansi-align@3.0.1:
@@ -98,12 +101,10 @@ packages:
   balanced-match@1.0.0:
     resolution: {integrity: sha512-9Y0g0Q8rmSt+H33DfKv7FOc3v+iRI+o1lbzt8jGcIosYW37IIW/2XVYq5NPdmaD5NQ59Nk26Kl/vZbwW9Fr8vg==}
 
-  bootstrap@4.3.1:
-    resolution: {integrity: sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==}
-    engines: {node: '>=6'}
+  bootstrap@5.0.0:
+    resolution: {integrity: sha512-tmhPET9B9qCl8dCofvHeiIhi49iBt0EehmIsziZib65k1erBW1rHhj2s/2JsuQh5Pq+xz2E9bEbzp9B7xHG+VA==}
     peerDependencies:
-      jquery: 1.9.1 - 3
-      popper.js: ^1.14.7
+      '@popperjs/core': ^2.9.2
 
   boxen@7.0.0:
     resolution: {integrity: sha512-j//dBVuyacJbvW+tvZ9HuH03fZ46QcaKvvhZickZqtB271DxJ7SNRSNxrV/dZX0085m7hISRZWbzWlJvx/rHSg==}
@@ -455,8 +456,8 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
-  jquery@3.2.1:
-    resolution: {integrity: sha512-iQUctXqe/nSa7hshPkQnJaJEUfxM139//hg2nJj+wsqVvd/YgXALR3jTNGh7BylgsyfcC8r4i2cJrClGBkDu5Q==}
+  jquery@3.5.0:
+    resolution: {integrity: sha512-Xb7SVYMvygPxbFMpTFQiHh1J7HClEaThguL15N/Gg37Lri/qKyhRGZYzHRyLH8Stq3Aow0LsHO2O2ci86fCrNQ==}
 
   json-parse-better-errors@1.0.2:
     resolution: {integrity: sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==}
@@ -587,10 +588,6 @@ packages:
   pify@3.0.0:
     resolution: {integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==}
     engines: {node: '>=4'}
-
-  popper.js@1.16.1:
-    resolution: {integrity: sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==}
-    deprecated: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
 
   possible-typed-array-names@1.0.0:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
@@ -840,6 +837,8 @@ packages:
 
 snapshots:
 
+  '@popperjs/core@2.11.8': {}
+
   '@zeit/schemas@2.36.0': {}
 
   accepts@1.3.8:
@@ -856,7 +855,7 @@ snapshots:
 
   angular-route@1.6.4: {}
 
-  angular@1.6.4: {}
+  angular@1.8.3: {}
 
   ansi-align@3.0.1:
     dependencies:
@@ -902,10 +901,9 @@ snapshots:
 
   balanced-match@1.0.0: {}
 
-  bootstrap@4.3.1(jquery@3.2.1)(popper.js@1.16.1):
+  bootstrap@5.0.0(@popperjs/core@2.11.8):
     dependencies:
-      jquery: 3.2.1
-      popper.js: 1.16.1
+      '@popperjs/core': 2.11.8
 
   boxen@7.0.0:
     dependencies:
@@ -1318,7 +1316,7 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  jquery@3.2.1: {}
+  jquery@3.5.0: {}
 
   json-parse-better-errors@1.0.2: {}
 
@@ -1431,8 +1429,6 @@ snapshots:
   pidtree@0.3.1: {}
 
   pify@3.0.0: {}
-
-  popper.js@1.16.1: {}
 
   possible-typed-array-names@1.0.0: {}
 
